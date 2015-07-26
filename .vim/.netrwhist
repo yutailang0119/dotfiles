@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/mutayutaro'
+let g:netrw_dirhist_2='/Users/mutayutaro/Documents/Endpoint'
+let g:netrw_dirhist_3='/Users/mutayutaro/Documents/workspace/vagrant/centos/cakephp-2.6.3/app/View/Tasks'
+let g:netrw_dirhist_4='/Users/mutayutaro/.vagrant.d'
