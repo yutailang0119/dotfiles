@@ -15,7 +15,6 @@ nerdtree
 slimv.vim
 syntastic
 tagbar
-unite.vim
 vim-airline
 vim-coloresque
 vim-commentary

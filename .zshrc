@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/mutayutaro/.oh-my-zsh
+export ZSH=/Users/yutaro/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -79,6 +79,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -al'
+alias realmbrowser='open $(find ~/Library/Developer/CoreSimulator/Devices/$(ls -t1 ~/Library/Developer/CoreSimulator/Devices/ | head -1)/data/Containers/Data/Application/ -name \*.realm)'
 
 ## 補完機能の強化
 autoload -U compinit
@@ -90,6 +91,9 @@ setopt correct
 ## 色を使う
 setopt prompt_subst
 
+# 古いコマンドと同じものは無視 
+setopt hist_save_no_dups
+
 # 重複する要素を自動的に削除
 typeset -U path cdpath fpath manpath
 
@@ -100,8 +104,15 @@ path=(
 	$path
 )
 
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
- export PATH=${PYENV_ROOT}/bin:$PATH
- eval "$(pyenv init -)"
-fi
+# Go
+export GOPATH=$HOME/go
+#export GOPATH=$HOME/Documents/workspaces/go
+export PATH=$PATH:$GOPATH/bin
+
+# swiftenv
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
