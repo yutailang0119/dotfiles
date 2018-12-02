@@ -1,0 +1,24 @@
+[core]
+    excludesfile = ~/.config/git/.gitignore_global
+[color]
+    ui = auto
+[commit]
+    template = ~/.stCommitMsg
+[alias]
+    sync = !git checkout master && git pull origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*')
+    for-each = for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname) '
+    logg = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
+    history = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cd %Cblue%cn%Cred%d %Creset%s'
+    today = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --since=midnight --oneline --author=\"`git config --get user.name`\"'"
+    refs = !git checkout $(git branch | peco | awk '{ print $NF }')
+    delete = !git branch -D $(git branch | peco | awk '{ print $NF }')
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+    process = git-lfs filter-process
+[push]
+    default = upstream
+[ghq]
+    root = ~/Documents/workspace/ghq
+    root = ~/go/src
