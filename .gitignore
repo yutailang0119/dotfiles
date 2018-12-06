@@ -1,0 +1,11 @@
+# fish
+.config/fish/config.private.fish
+.config/fish/fishd.*
+
+# .ssh
+.ssh/known_hosts
+.ssh/conf.d/hosts/certs/*
+.ssh/conf.d/hosts/*.conf
+
+# backups
+backups/*
