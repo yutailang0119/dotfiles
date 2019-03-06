@@ -5,7 +5,11 @@ function xcode -d "Open file by Xcode"
 
     if test -z $a_option
         set a_option -a
-        set application Xcode
+        set -l xcode_select_path (xcode-select -p)
+        set application (string match -r "^.*Xcode[^/]*\.app" $xcode_select_path)
+        if test -z $application
+          set application Xcode
+        end
     else if test $a_option != -a
         echo "Error: Option supports only '-a'"
         return 1
@@ -14,9 +18,9 @@ function xcode -d "Open file by Xcode"
         return 1
     end
 
-    set -l match_pattern (string match -nr 'Xcode' $application)
-    if test \( -z $match_pattern \) -o \( $match_pattern != '1 5' \)
-        echo "Error: Only application with 'Xcode' prefix are supported"
+    set -l match_pattern (string match -r "Xcode" $application)
+    if test -z $match_pattern
+        echo "Error: Only applications containing 'Xcode' in name are supported"
         return 1
     end
 
