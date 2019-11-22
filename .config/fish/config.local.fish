@@ -16,6 +16,8 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
 
+set -Ux LSCOLORS cxfxexdxbxegedabagacad
+
 # Alias
 alias ll "ls -al"
 alias ..2 "cd ../../"
