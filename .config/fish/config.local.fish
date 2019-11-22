@@ -40,4 +40,7 @@ source (plenv init - | psub)
 # Fultter
 set -U fish_user_paths /usr/local/flutter/bin $fish_user_paths
 
+# Android Studio
+set -Ux ANDROID_HOME $HOME/Library/Android/sdk/
+
 source ~/.config/fish/config.private.fish
