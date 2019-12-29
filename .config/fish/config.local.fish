@@ -24,7 +24,7 @@ alias ..2 "cd ../../"
 alias ..3 "cd ../../../"
 alias ..4 "cd ../../../../"
 alias ..5 "cd ../../../../../"
-alias gl "ghq look (ghq list | peco)"
+alias gl "cd (ghq list --full-path | peco)"
 
 # Go
 set -Ux GOPATH $HOME/go
