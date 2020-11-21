@@ -15,7 +15,19 @@ $ sh ./dotfilesLink.sh
 ### SSH
 
 Create config files for hosts to `./ssh/conf.d/hosts/` .
-See [./ssh/conf.d/hosts/github](./ssh/conf.d/hosts/github).
+
+Example: github.com
+- conf: .ssh/conf.d/hosts/github.conf
+    ```
+    Host github.com
+    User git
+    HostName github.com
+    IdentityFile ~/.ssh/conf.d/hosts/certs/xxxxxxxx
+    IdentitiesOnly yes
+    ```
+- certs:
+    - .ssh/conf.d/hosts/certs/xxxxxxxx
+    - .ssh/conf.d/hosts/certs/xxxxxxxx.pub
 
 ### Git
 
