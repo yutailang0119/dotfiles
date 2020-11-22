@@ -38,5 +38,5 @@ if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
