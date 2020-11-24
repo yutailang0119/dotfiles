@@ -4,7 +4,7 @@
 # For a full list of active aliases, run `alias`.
 #
 alias ll='ls -al'
-alias realmbrowser='open $(find ~/Library/Developer/CoreSimulator/Devices/$(ls -t1 ~/Library/Developer/CoreSimulator/Devices/ | head -1)/data/Containers/Data/Application/ -name \*.realm)'
+alias gl='cd $(ghq list --full-path | peco)'
 
 ## Completion
 autoload -U compinit
