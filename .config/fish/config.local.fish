@@ -31,7 +31,7 @@ set -Ux GOPATH $HOME/go
 set -U fish_user_paths $GOPATH/bin $fish_user_paths
 
 # rbenv
-rbenv init - | source
+if which rbenv > /dev/null; rbenv init - | source; end
 
 # plenv
 # set -gx PATH ~/.plenv/bin $PATH
@@ -43,4 +43,5 @@ set -U fish_user_paths /usr/local/flutter/bin $fish_user_paths
 # Android Studio
 set -Ux ANDROID_HOME $HOME/Library/Android/sdk/
 
-source ~/.config/fish/config.private.fish
+# Private config
+if test -f ~/.config/fish/config.private.fish; source ~/.config/fish/config.private.fish; end
