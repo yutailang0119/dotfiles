@@ -33,10 +33,6 @@ set -U fish_user_paths $GOPATH/bin $fish_user_paths
 # rbenv
 if which rbenv > /dev/null; rbenv init - | source; end
 
-# plenv
-# set -gx PATH ~/.plenv/bin $PATH
-source (plenv init - | psub)
-
 # Fultter
 set -U fish_user_paths /usr/local/flutter/bin $fish_user_paths
 
