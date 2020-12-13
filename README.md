@@ -20,14 +20,14 @@ Example: github.com
 - conf: .ssh/conf.d/hosts/github.conf
     ```
     Host github.com
-    User git
-    HostName github.com
-    IdentityFile ~/.ssh/conf.d/hosts/certs/xxxxxxxx
-    IdentitiesOnly yes
+        HostName github.com
+        User git
+        IdentityFile ~/.ssh/conf.d/hosts/certs/github
+        IdentitiesOnly yes
     ```
 - certs:
-    - .ssh/conf.d/hosts/certs/xxxxxxxx
-    - .ssh/conf.d/hosts/certs/xxxxxxxx.pub
+    - .ssh/conf.d/hosts/certs/github
+    - .ssh/conf.d/hosts/certs/github.pub
 
 ### Git
 
