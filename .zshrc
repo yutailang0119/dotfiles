@@ -24,9 +24,10 @@ typeset -U path cdpath fpath manpath
 
 path=(
     $HOME/bin(N-/)
+    /opt/homebrew/bin(N-/)
     /usr/local/bin(N-/)
-	/usr/local/sbin(N-/)
-	$path
+    /usr/local/sbin(N-/)
+    $path
 )
 
 # Go
