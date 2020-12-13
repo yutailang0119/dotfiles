@@ -30,8 +30,8 @@ path=(
 )
 
 # Go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOPATH/bin
 
 # swiftenv
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
