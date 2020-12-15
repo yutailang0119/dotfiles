@@ -14,7 +14,7 @@ $ sh ./dotfilesLink.sh
 
 ### SSH
 
-Create config files for hosts to `./ssh/conf.d/hosts/` .
+Create config files for hosts to `.ssh/conf.d/hosts/` .
 
 Example: github.com
 - conf: .ssh/conf.d/hosts/github.conf
