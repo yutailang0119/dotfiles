@@ -6,14 +6,18 @@
 alias ll='ls -al'
 alias gl='cd $(ghq list --full-path | peco)'
 
-## Completion
-autoload -U compinit
+# Completion
+autoload -Uz compinit
 compinit
 
-## Suggest command
+# Colors
+autoload -Uz colors
+colors
+
+# Suggest command
 setopt correct
 
-## Use color
+# Expand PROMPT
 setopt prompt_subst
 
 # Ignore duplicate commands
