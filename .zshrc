@@ -26,6 +26,9 @@ setopt hist_save_no_dups
 # Remove duplicate items
 typeset -U path cdpath fpath manpath
 
+# Case insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 path=(
     $HOME/bin(N-/)
     /opt/homebrew/bin(N-/)
