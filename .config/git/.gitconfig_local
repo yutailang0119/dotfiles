@@ -20,6 +20,6 @@
 [push]
     default = upstream
 [ghq]
-    root = ~/Documents/workspace/ghq
+    root = ~/Documents/ghq
 [ghq "https://github.com/golang"]
     root = ~/go/src
