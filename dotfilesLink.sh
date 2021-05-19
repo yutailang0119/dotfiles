@@ -6,7 +6,7 @@ TIMESTAMP=$(date +%s)
 BACKUP_DIR=$SCRIPT_DIR/backups/$TIMESTAMP
 mkdir -p $BACKUP_DIR/.config
 
-TARGETS=(.bashrc .bash_profile .zshrc .zhenv .config/fish .ssh .gitconfig .config/git .vimrc .vimrc.local)
+TARGETS=(.bashrc .bash_profile .zprofile .zshrc .zhenv .config/fish .ssh .gitconfig .config/git .vimrc .vimrc.local)
 
 function backup () {
     path=$1
