@@ -28,9 +28,3 @@ do
     symblic_link ${i}
 done
 
-if [ -z "$(ls $BACKUP_DIR/.config)" ]; then
-    rm -r $BACKUP_DIR/.config
-    if [ -z "$(ls $BACKUP_DIR)" ]; then
-        rm -r $BACKUP_DIR
-    fi
-fi
