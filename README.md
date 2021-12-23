@@ -1,6 +1,6 @@
 # [yutailang0119](https://github.com/yutailang0119)'s dotfiles
 
-## Usege
+## Usage
 
 Execute the shellscript command.
 

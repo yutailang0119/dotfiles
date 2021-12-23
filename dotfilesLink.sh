@@ -6,7 +6,7 @@ TIMESTAMP=$(date +%s)
 BACKUP_DIR=$SCRIPT_DIR/backups/$TIMESTAMP
 mkdir -p $BACKUP_DIR/.config
 
-TARGETS=(.bashrc .bash_profile .zprofile .zshrc .zhenv .config/fish .ssh .gitconfig .config/git .vimrc .vimrc.local)
+TARGETS=(.bashrc .bash_profile .zprofile .zshrc .zhenv .config .ssh .gitconfig .config .vimrc .vimrc.local)
 
 function backup () {
     path=$1
@@ -28,9 +28,3 @@ do
     symblic_link ${i}
 done
 
-if [ -z "$(ls $BACKUP_DIR/.config)" ]; then
-    rm -r $BACKUP_DIR/.config
-    if [ -z "$(ls $BACKUP_DIR)" ]; then
-        rm -r $BACKUP_DIR
-    fi
-fi
