@@ -1,2 +1,10 @@
 [include]
   path = ~/.config/git/.gitconfig_local
+[user]
+	name = yutailang0119
+	email = yutailang0119@gmail.com
+[core]
+	excludesfile = ~/.config/git/.gitignore_global
+[credential]
+	helper = osxkeychain
+

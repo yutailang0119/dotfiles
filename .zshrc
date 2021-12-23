@@ -31,7 +31,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 path=(
     $HOME/bin(N-/)
-    /opt/homebrew/bin(N-/)
     /usr/local/bin(N-/)
     /usr/local/sbin(N-/)
     $path
