@@ -32,6 +32,6 @@ Example: github.com
 ### Git
 
 ```bash
-$ git config --global user.name xxxxx
-$ git config --global user.email yyyyy@zzz.com
+git config --global user.name xxxxx
+git config --global user.email yyyyy@zzz.com
 ```
