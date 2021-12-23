@@ -5,7 +5,7 @@
 Execute the shellscript command.
 
 ```bash
-$ sh ./dotfilesLink.sh
+sh ./dotfilesLink.sh
 ```
 
 **Backups are stored in `./backup` each time a command is executed.**
