@@ -7,5 +7,8 @@
 .ssh/conf.d/hosts/certs/*
 .ssh/conf.d/hosts/*.conf
 
+# Karabiner-Elements https://karabiner-elements.pqrs.org
+.config/karabiner/*
+
 # backups
 backups/*
