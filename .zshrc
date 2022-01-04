@@ -40,10 +40,7 @@ path=(
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
 # rbenv
-if which rbenv > /dev/null; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
-fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
  # arm64/x86_64
 export PROMPT="%n@%m(`uname -m`) %1~ %# "
