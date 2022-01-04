@@ -29,13 +29,6 @@ typeset -U path cdpath fpath manpath
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-path=(
-    $HOME/bin(N-/)
-    /usr/local/bin(N-/)
-    /usr/local/sbin(N-/)
-    $path
-)
-
 # swiftenv
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
