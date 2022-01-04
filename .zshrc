@@ -44,4 +44,3 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
  # arm64/x86_64
 export PROMPT="%n@%m(`uname -m`) %1~ %# "
- 
