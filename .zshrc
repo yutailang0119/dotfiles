@@ -30,15 +30,10 @@ typeset -U path cdpath fpath manpath
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 path=(
-    /opt/homebrew/bin(N-/)
-    /opt/homebrew/sbin(N-/)
-    /usr/bin
-    /usr/sbin
-    /bin
-    /sbin
+    $HOME/bin(N-/)
     /usr/local/bin(N-/)
     /usr/local/sbin(N-/)
-    /Library/Apple/usr/bin
+    $path
 )
 
 # swiftenv
