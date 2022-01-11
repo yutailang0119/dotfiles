@@ -35,5 +35,15 @@ if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
- # arm64/x86_64
-export PROMPT="%n@%m(`uname -m`) %1~ %# "
+# git
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{magenta}!%f"
+zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+%f"
+zstyle ':vcs_info:*' formats " %F{white}(%f%F{yellow}%b%f %c%u%F{white})%f "
+zstyle ':vcs_info:*' actionformats '%F{magenta}[%b|%a]%f'
+precmd () { vcs_info }
+
+# プロンプトカスタマイズ
+PROMPT='%B%F{green}%n@%m%b(`uname -m`)%f:%F{white}%~%f❯%F{cyan}$vcs_info_msg_0_%f❯ '
