@@ -46,4 +46,4 @@ zstyle ':vcs_info:*' actionformats '%F{magenta}[%b|%a]%f'
 precmd () { vcs_info }
 
 # プロンプトカスタマイズ
-PROMPT='%B%F{green}%n@%m%b(`uname -m`)%f:%F{white}%~%f❯%F{cyan}$vcs_info_msg_0_%f❯ '
+PROMPT='%B%F{green}%n@%m%b%f:%F{white}%~%f❯%F{cyan}$vcs_info_msg_0_%f❯ '
