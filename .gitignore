@@ -10,5 +10,8 @@
 # Karabiner-Elements https://karabiner-elements.pqrs.org
 .config/karabiner/*
 
+# cli/cli a.k.a. gh https://github.com/cli/cli
+.config/gh/*
+
 # backups
 backups/*
