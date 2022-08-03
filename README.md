@@ -31,7 +31,13 @@ Example: github.com
 
 ### Git
 
+<details><summary>Set global user</summary>
+
+https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git
+
 ```bash
 git config --global user.name xxxxx
 git config --global user.email yyyyy@zzz.com
 ```
+
+</details>
