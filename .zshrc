@@ -4,7 +4,7 @@
 # For a full list of active aliases, run `alias`.
 #
 alias ll='ls -al'
-alias gl='cd $(ghq list --full-path | peco)'
+alias gl='`ghq list --full-path | peco`'
 
 # Completion
 autoload -Uz compinit
@@ -22,6 +22,9 @@ setopt prompt_subst
 
 # Ignore duplicate commands
 setopt hist_save_no_dups
+
+# gl
+setopt auto_cd
 
 # Remove duplicate items
 typeset -U path cdpath fpath manpath
