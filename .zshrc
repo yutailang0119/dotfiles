@@ -38,6 +38,9 @@ if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# mise
+if which mise > /dev/null; then eval "$(mise activate zsh)"; fi
+
 # git
 autoload -Uz vcs_info
 setopt prompt_subst
