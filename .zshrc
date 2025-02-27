@@ -32,9 +32,6 @@ typeset -U path cdpath fpath manpath
 # Case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# swiftenv
-if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
-
 # mise
 if which mise > /dev/null; then eval "$(mise activate zsh)"; fi
 
