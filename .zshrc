@@ -35,9 +35,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # swiftenv
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
-# rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # mise
 if which mise > /dev/null; then eval "$(mise activate zsh)"; fi
 
